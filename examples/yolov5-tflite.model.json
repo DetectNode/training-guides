@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "input": {
+    "layout": "NHWC",
+    "width": 640,
+    "height": 640,
+    "preprocess": "letterbox",
+    "channel_order": "rgb"
+  },
+  "task": {
+    "task_type": "detection",
+    "output": {
+      "layout": "four-output",
+      "box_format": "corners",
+      "box_coordinate_order": "yx",
+      "boxes_layout": "row-major",
+      "boxes_tensor_index": 0,
+      "logits_tensor_index": 1,
+      "scores_tensor_index": 2,
+      "num_det_tensor_index": 3,
+      "normalized_coords": true,
+      "background_class_index": -1
+    },
+    "postprocess": {
+      "top_k_before_nms": 0,
+      "has_builtin_nms": true
+    }
+  }
+}

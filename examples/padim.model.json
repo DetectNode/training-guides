@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "input": {
+    "layout": "NCHW",
+    "width": 256,
+    "height": 256,
+    "preprocess": "letterbox",
+    "channel_order": "rgb",
+    "normalize": {
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    }
+  },
+  "task": {
+    "task_type": "anomaly",
+    "output": {
+      "heatmap_tensor_index": 0,
+      "compute_global_score": true,
+      "global_score_tensor_index": -1,
+      "recommended_threshold_pct": 75.0,
+      "min_score": 0.0,
+      "max_score": 1.0,
+      "global_min_score": 0.0,
+      "global_max_score": 1.0
+    }
+  }
+}

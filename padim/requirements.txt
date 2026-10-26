@@ -1,0 +1,14 @@
+# Python dependencies for app/training/start.py only.
+#
+# The launcher/script installs CPU-only torch and torchvision first (no CUDA
+# download), then this file. For the manual path:
+#
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+#   pip install -r requirements.txt
+#
+# We only train and export ONNX on the computer; inference runs on the camera,
+# so onnxruntime and onnxscript are not needed.
+
+anomalib>=2.7.0,<2.8.0
+onnx>=1.16.0
+Pillow>=10.0.0
