@@ -128,10 +128,6 @@ also accepted for backwards compatibility and normalized automatically.
 | `input.normalize.std` | array[3] | no | per-channel std (must be > 0) |
 | `dlpu` | string | no | `""`, `artpec8` or `artpec9` |
 
-When `normalize` is absent, the backend keeps the legacy `/255`-only behavior —
-use this for YOLOv5 (which divides by 255 internally). When present, pixels are
-normalized as `(pixel/255 - mean[c]) / std[c]`.
-
 ### `task.output` — detection
 
 | Field | Required | Values / notes |
